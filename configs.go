@@ -897,23 +897,23 @@ type KickChatMemberConfig struct {
 type RestrictChatMemberConfig struct {
 	ChatMemberConfig
 	UntilDate             int64
-	CanSendMessages       *bool
-	CanSendMediaMessages  *bool
-	CanSendOtherMessages  *bool
-	CanAddWebPagePreviews *bool
+	CanSendMessages       bool
+	CanSendMediaMessages  bool
+	CanSendOtherMessages  bool
+	CanAddWebPagePreviews bool
 }
 
 // PromoteChatMemberConfig contains fields to promote members of chat
 type PromoteChatMemberConfig struct {
 	ChatMemberConfig
-	CanChangeInfo      *bool
-	CanPostMessages    *bool
-	CanEditMessages    *bool
-	CanDeleteMessages  *bool
-	CanInviteUsers     *bool
-	CanRestrictMembers *bool
-	CanPinMessages     *bool
-	CanPromoteMembers  *bool
+	CanChangeInfo      bool
+	CanPostMessages    bool
+	CanEditMessages    bool
+	CanDeleteMessages  bool
+	CanInviteUsers     bool
+	CanRestrictMembers bool
+	CanPinMessages     bool
+	CanPromoteMembers  bool
 }
 
 // ChatConfig contains information about getting information on a chat.
