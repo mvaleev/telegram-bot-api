@@ -713,16 +713,16 @@ func (bot *BotAPI) RestrictChatMember(config RestrictChatMemberConfig) (APIRespo
 	v.Add("user_id", strconv.Itoa(config.UserID))
 
 	if &config.CanSendMessages != nil {
-		v.Add("can_send_messages", strconv.FormatBool(*config.CanSendMessages))
+		v.Add("can_send_messages", strconv.FormatBool(config.CanSendMessages))
 	}
 	if &config.CanSendMediaMessages != nil {
-		v.Add("can_send_media_messages", strconv.FormatBool(*config.CanSendMediaMessages))
+		v.Add("can_send_media_messages", strconv.FormatBool(config.CanSendMediaMessages))
 	}
 	if &config.CanSendOtherMessages != nil {
-		v.Add("can_send_other_messages", strconv.FormatBool(*config.CanSendOtherMessages))
+		v.Add("can_send_other_messages", strconv.FormatBool(config.CanSendOtherMessages))
 	}
 	if &config.CanAddWebPagePreviews != nil {
-		v.Add("can_add_web_page_previews", strconv.FormatBool(*config.CanAddWebPagePreviews))
+		v.Add("can_add_web_page_previews", strconv.FormatBool(config.CanAddWebPagePreviews))
 	}
 
 	bot.debugLog("restrictChatMember", v, nil)
@@ -743,28 +743,28 @@ func (bot *BotAPI) PromoteChatMember(config PromoteChatMemberConfig) (APIRespons
 	v.Add("user_id", strconv.Itoa(config.UserID))
 
 	if &config.CanChangeInfo != nil {
-		v.Add("can_change_info", strconv.FormatBool(*config.CanChangeInfo))
+		v.Add("can_change_info", strconv.FormatBool(config.CanChangeInfo))
 	}
 	if &config.CanPostMessages != nil {
-		v.Add("can_post_messages", strconv.FormatBool(*config.CanPostMessages))
+		v.Add("can_post_messages", strconv.FormatBool(config.CanPostMessages))
 	}
 	if &config.CanEditMessages != nil {
-		v.Add("can_edit_messages", strconv.FormatBool(*config.CanEditMessages))
+		v.Add("can_edit_messages", strconv.FormatBool(config.CanEditMessages))
 	}
 	if &config.CanDeleteMessages != nil {
-		v.Add("can_delete_messages", strconv.FormatBool(*config.CanDeleteMessages))
+		v.Add("can_delete_messages", strconv.FormatBool(config.CanDeleteMessages))
 	}
 	if &config.CanInviteUsers != nil {
-		v.Add("can_invite_users", strconv.FormatBool(*config.CanInviteUsers))
+		v.Add("can_invite_users", strconv.FormatBool(config.CanInviteUsers))
 	}
 	if &config.CanRestrictMembers != nil {
-		v.Add("can_restrict_members", strconv.FormatBool(*config.CanRestrictMembers))
+		v.Add("can_restrict_members", strconv.FormatBool(config.CanRestrictMembers))
 	}
 	if &config.CanPinMessages != nil {
-		v.Add("can_pin_messages", strconv.FormatBool(*config.CanPinMessages))
+		v.Add("can_pin_messages", strconv.FormatBool(config.CanPinMessages))
 	}
 	if &config.CanPromoteMembers != nil {
-		v.Add("can_promote_members", strconv.FormatBool(*config.CanPromoteMembers))
+		v.Add("can_promote_members", strconv.FormatBool(config.CanPromoteMembers))
 	}
 
 	bot.debugLog("promoteChatMember", v, nil)
